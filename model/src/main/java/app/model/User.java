@@ -7,7 +7,6 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Data
@@ -22,7 +21,7 @@ public class User {
     private String username;
     private String password;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="role_id")
     @Fetch(FetchMode.JOIN)
     private Role role;

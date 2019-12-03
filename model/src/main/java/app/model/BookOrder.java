@@ -23,12 +23,12 @@ public class BookOrder {
     private LocalDate order_date;
     private int approved;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="book_id")
     @Fetch(FetchMode.JOIN)
     private Book book;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     @Fetch(FetchMode.JOIN)
     private User user;
