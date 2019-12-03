@@ -20,7 +20,7 @@ public class Book {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     @Fetch(FetchMode.JOIN)
     private User user;
